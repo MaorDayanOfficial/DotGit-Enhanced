@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About — DotGit Enhanced</title>
+    <meta charset="utf-8">
+    <base target="_blank">
+    <style>
+        :root {
+            --bg: #0b0d14; --card: #12141e; --border: #252840;
+            --text: #e4e6f0; --muted: #5c6178; --secondary: #8b90a5;
+            --green: #34d399; --blue: #3b82f6; --amber: #fbbf24;
+            --gradient: linear-gradient(135deg, #34d399, #3b82f6);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg); color: var(--text);
+            display: flex; justify-content: center; padding: 40px 20px;
+            -webkit-font-smoothing: antialiased; line-height: 1.6;
+        }
+        .container { max-width: 560px; width: 100%; }
+
+        /* Hero */
+        .hero { text-align: center; margin-bottom: 28px; }
+        .hero svg { margin-bottom: 12px; }
+        .hero h1 {
+            font-size: 26px; font-weight: 800; margin-bottom: 4px;
+            background: var(--gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero .tagline {
+            font-size: 13px; color: var(--secondary); margin-bottom: 8px;
+        }
+        .version {
+            font-size: 11px; color: var(--muted);
+            background: var(--card); border: 1px solid var(--border);
+            padding: 3px 10px; border-radius: 12px; display: inline-block;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;
+        }
+        .card h2 {
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.8px; color: var(--muted); margin-bottom: 12px;
+        }
+        .card p { font-size: 13px; color: var(--secondary); line-height: 1.7; }
+        .card a { color: var(--blue); text-decoration: none; transition: color 0.2s; }
+        .card a:hover { color: var(--green); }
+        .card strong { color: var(--text); }
+
+        /* Credit Items */
+        .credit-item {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .credit-item:last-child { border-bottom: none; }
+        .credit-name {
+            font-size: 14px; font-weight: 600; color: var(--text);
+            margin-bottom: 2px;
+        }
+        .credit-role {
+            font-size: 11px; color: var(--green);
+            font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.3px; margin-bottom: 4px;
+        }
+        .credit-desc { font-size: 12px; color: var(--secondary); }
+
+        /* Deps */
+        .dep-row {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .dep-row:last-child { border-bottom: none; }
+        .dep-name {
+            font-size: 13px; font-weight: 600;
+            font-family: 'SF Mono', 'Cascadia Code', monospace;
+        }
+        .dep-by { font-size: 11px; color: var(--muted); }
+
+        /* Warning */
+        .warning {
+            display: flex; align-items: flex-start; gap: 10px;
+            padding: 14px 16px; background: rgba(251, 191, 36, 0.06);
+            border: 1px solid rgba(251, 191, 36, 0.15); border-radius: 10px;
+            margin-bottom: 14px;
+        }
+        .warning svg { flex-shrink: 0; margin-top: 1px; }
+        .warning p { font-size: 12px; color: #d4a017; line-height: 1.6; }
+
+        /* Footer */
+        .footer {
+            text-align: center; margin-top: 20px;
+            font-size: 11px; color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="url(#aG)" stroke-width="2"/>
+                <circle cx="12" cy="12" r="3.5" fill="url(#aG)"/>
+                <circle cx="12" cy="4.5" r="1.8" fill="url(#aG)"/>
+                <circle cx="18" cy="16.5" r="1.8" fill="url(#aG)"/>
+                <circle cx="6" cy="16.5" r="1.8" fill="url(#aG)"/>
+                <line x1="12" y1="8.5" x2="12" y2="6.3" stroke="url(#aG)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14.8" y1="14" x2="16.5" y2="15.2" stroke="url(#aG)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="9.2" y1="14" x2="7.5" y2="15.2" stroke="url(#aG)" stroke-width="1.5" stroke-linecap="round"/>
+                <defs><linearGradient id="aG" x1="2" y1="2" x2="22" y2="22"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient></defs>
+            </svg>
+            <h1>DotGit Enhanced</h1>
+            <p class="tagline">Detect. Download. Extract.</p>
+            <span class="version">v5.2-enhanced</span>
+        </div>
+
+        <div class="warning">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <p>
+                <strong>For authorized security research only.</strong> Unauthorized access to systems is illegal. Always ensure proper authorization. This extension stores visited domains locally to avoid duplicate checks — clear via the trash icon. Use at your own risk.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>What It Does</h2>
+            <p>
+                Automatically detects exposed <strong>.git</strong> repositories, <strong>.env</strong> files, and other sensitive directories on every website you visit. When found, one click downloads the Git objects <strong>and reconstructs the actual source files</strong> — delivering a ZIP with both raw data and extracted source code.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Built By</h2>
+            <div class="credit-item">
+                <div class="credit-name"><a href="https://github.com/MaorDayanOfficial">Maor D.</a></div>
+                <div class="credit-role">Developer & Maintainer</div>
+                <div class="credit-desc">
+                    Cyber Intelligence Researcher & Presales Lead at Kaspersky Israel. Author of <em>"The Digital Hunter: The Art of Human and Network Intelligence. (Soon 14/02/2026)"</em>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Inspired By & Credits</h2>
+            <div class="credit-item">
+                <div class="credit-name"><a href="https://github.com/davtur19/DotGit">DotGit</a> by <a href="https://github.com/davtur19">davtur19</a></div>
+                <div class="credit-role">Original Extension</div>
+                <div class="credit-desc">
+                    The foundational browser extension — core detection engine, content script architecture, object crawling logic, and download queue system originate from davtur19's work.
+                </div>
+            </div>
+            <div class="credit-item">
+                <div class="credit-name"><a href="https://github.com/arthaud/git-dumper">git-dumper</a> by <a href="https://github.com/arthaud">Maxime Arthaud</a></div>
+                <div class="credit-role">Discovery Techniques</div>
+                <div class="credit-desc">
+                    Directory listing detection, expanded branch/ref coverage, and dynamic ref discovery from file content were inspired by git-dumper's approach.
+                </div>
+            </div>
+            <div class="credit-item">
+                <div class="credit-name"><a href="https://github.com/internetwache/GitTools">GitTools</a> by <a href="https://github.com/gehaxelt">@gehaxelt</a> / <a href="https://github.com/internetwache">@internetwache</a></div>
+                <div class="credit-role">Extraction Engine</div>
+                <div class="credit-desc">
+                    The Extractor's commit→tree→blob traversal approach was the basis for the in-browser source file reconstruction engine.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Libraries</h2>
+            <div class="dep-row">
+                <div>
+                    <span class="dep-name"><a href="https://github.com/nodeca/pako">Pako</a></span>
+                    <div class="dep-by">Vitaly Puzrin & Andrei Tuputcyn</div>
+                </div>
+            </div>
+            <div class="dep-row">
+                <div>
+                    <span class="dep-name"><a href="https://github.com/Stuk/jszip">JSZip</a></span>
+                    <div class="dep-by">Stuart Knightley & David Duponchel</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            DotGit Enhanced — GPL-3.0 License
+        </div>
+    </div>
+</body>
+</html>
