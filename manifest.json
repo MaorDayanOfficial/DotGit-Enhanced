@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "DotGit",
-  "version": "5.2",
-  "description": "An extension for checking if .git is exposed in visited websites",
+  "name": "DotGit Enhanced",
+  "version": "6.0",
+  "description": "Detect exposed .git repositories, download objects, and extract source files — all in one click",
   "icons": {
     "16": "icons/dotgit-16.png",
     "32": "icons/dotgit-32.png",
@@ -25,9 +25,6 @@
     "wss://*/*"
   ],
   "background": {
-    "scripts": [
-      "dotgit.js"
-    ],
     "service_worker": "dotgit.js",
     "type": "module"
   },
