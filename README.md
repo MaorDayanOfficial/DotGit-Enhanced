@@ -236,7 +236,7 @@ Accessing systems without authorization is illegal in most jurisdictions. Always
 
 ### Built By
 
-**[Maor D.](https://github.com/maord2000)** — Cyber Intelligence Researcher, Manager of Intelligence & Damages at Kaspersky Israel, and author of *"The Digital Hunter: The Art of Human and Network Intelligence."*
+**[Maor D.](https://github.com/maord2000)** — Cyber Intelligence Researcher & Cyber Security Researcher
 
 ### Standing on the Shoulders of
 
