@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Privacy Policy — DotGit Enhanced</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #0b0d14; --surface: #12141e; --border: #252840;
+            --text: #e4e6f0; --muted: #5c6178; --secondary: #8b90a5;
+            --green: #34d399; --blue: #3b82f6;
+            --gradient: linear-gradient(135deg, #34d399, #3b82f6);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg); color: var(--text);
+            line-height: 1.75; -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+        .header { text-align: center; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+        .header svg { margin-bottom: 12px; }
+        .header h1 {
+            font-size: 28px; font-weight: 800;
+            background: var(--gradient); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .header .subtitle { font-size: 14px; color: var(--secondary); margin-top: 4px; }
+        .header .updated {
+            display: inline-block; margin-top: 12px; font-size: 11px; color: var(--muted);
+            background: var(--surface); border: 1px solid var(--border);
+            padding: 4px 12px; border-radius: 12px;
+        }
+        h2 {
+            font-size: 18px; font-weight: 700; color: var(--green);
+            margin: 36px 0 12px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        h2:first-of-type { border-top: none; padding-top: 0; }
+        h3 { font-size: 15px; font-weight: 600; color: var(--text); margin: 20px 0 8px; }
+        p { font-size: 14px; color: var(--secondary); margin-bottom: 14px; }
+        strong { color: var(--text); }
+        ul { margin: 0 0 14px 20px; }
+        li { font-size: 14px; color: var(--secondary); margin-bottom: 6px; }
+        li strong { color: var(--text); }
+        .card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 10px; padding: 16px 20px; margin: 16px 0;
+        }
+        .card p { margin-bottom: 0; }
+        .card.highlight { border-color: rgba(52,211,153,0.25); }
+        table {
+            width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px;
+        }
+        th {
+            text-align: left; padding: 10px 14px;
+            background: var(--surface); color: var(--green);
+            border-bottom: 2px solid var(--border);
+            font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        td {
+            padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: var(--secondary);
+        }
+        td:first-child { color: var(--text); font-weight: 500; }
+        code {
+            font-family: 'SF Mono', 'Cascadia Code', monospace;
+            background: rgba(52,211,153,0.08); color: var(--green);
+            padding: 2px 6px; border-radius: 4px; font-size: 12px;
+        }
+        a { color: var(--blue); text-decoration: none; }
+        a:hover { color: var(--green); }
+        .footer {
+            margin-top: 48px; padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center; font-size: 12px; color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="url(#pG)" stroke-width="2"/>
+                <circle cx="12" cy="12" r="3.5" fill="url(#pG)"/>
+                <circle cx="12" cy="4.5" r="1.8" fill="url(#pG)"/>
+                <circle cx="18" cy="16.5" r="1.8" fill="url(#pG)"/>
+                <circle cx="6" cy="16.5" r="1.8" fill="url(#pG)"/>
+                <line x1="12" y1="8.5" x2="12" y2="6.3" stroke="url(#pG)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14.8" y1="14" x2="16.5" y2="15.2" stroke="url(#pG)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="9.2" y1="14" x2="7.5" y2="15.2" stroke="url(#pG)" stroke-width="1.5" stroke-linecap="round"/>
+                <defs><linearGradient id="pG" x1="2" y1="2" x2="22" y2="22"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient></defs>
+            </svg>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">DotGit Enhanced — Browser Extension</p>
+            <span class="updated">Last updated: March 5, 2026</span>
+        </div>
+
+        <h2>Overview</h2>
+        <p>
+            DotGit Enhanced ("the extension") is a browser extension for security researchers that detects exposed version control directories on websites. This privacy policy explains what data the extension handles, how it is stored, and your rights regarding that data.
+        </p>
+
+        <div class="card highlight">
+            <p><strong>The short version:</strong> All data stays on your device. Nothing is collected, transmitted, or shared with anyone — including the developer. There are no analytics, no tracking, no external servers, and no accounts.</p>
+        </div>
+
+        <h2>Developer Information</h2>
+        <p>
+            <strong>Developer:</strong> Maor D.<br>
+            <strong>Contact:</strong> <a href="mailto:maord2000@gmail.com">maord2000@gmail.com</a><br>
+            <strong>Source Code:</strong> <a href="https://github.com/MaorDayanOfficial/DotGit-Enhanced" target="_blank">github.com/MaorDayanOfficial/DotGit-Enhanced</a>
+        </p>
+
+        <h2>Data the Extension Stores Locally</h2>
+        <p>
+            The extension uses <code>chrome.storage.local</code> to store the following data <strong>entirely on your device</strong>:
+        </p>
+
+        <table>
+            <thead>
+                <tr><th>Data</th><th>Purpose</th><th>Retention</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Visited website origins</td>
+                    <td>Prevent duplicate scans of the same site during a browsing session</td>
+                    <td>Cleared on each browser restart or manually via the extension popup</td>
+                </tr>
+                <tr>
+                    <td>Finding URLs</td>
+                    <td>Display discovered exposed repositories and sensitive files in the popup</td>
+                    <td>Until the user deletes individual findings or clears all data</td>
+                </tr>
+                <tr>
+                    <td>User settings</td>
+                    <td>Remember scan preferences, notification settings, download parameters, and blacklisted hostnames</td>
+                    <td>Until the user resets settings or uninstalls the extension</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Data the Extension Accesses Temporarily</h2>
+
+        <h3>Web History</h3>
+        <p>
+            The extension observes website origins (e.g., <code>https://example.com</code>) via the <code>webRequest</code> API to determine when you navigate to a new site. Only the origin is recorded — not the full URL path, page title, or browsing duration. This list is stored locally to prevent scanning the same origin twice. It is <strong>never transmitted externally</strong>.
+        </p>
+
+        <h3>Website Content (User-Initiated Downloads Only)</h3>
+        <p>
+            When you <strong>explicitly click the download button</strong> in the extension popup, the extension sends HTTP GET requests to the target website to fetch exposed Git objects (e.g., <code>.git/HEAD</code>, <code>.git/objects/...</code>). These objects are decompressed and processed in memory to reconstruct source files, then packaged into a ZIP file saved to your local filesystem via the browser's download API.
+        </p>
+        <p>
+            This website content is <strong>never transmitted to any external server</strong>. It exists only in browser memory during processing and in the resulting local ZIP file.
+        </p>
+
+        <h2>Data the Extension Does NOT Collect</h2>
+        <ul>
+            <li><strong>Personally identifiable information</strong> — no names, emails, addresses, or IDs</li>
+            <li><strong>Authentication information</strong> — no passwords or credentials</li>
+            <li><strong>Financial information</strong> — no payment or transaction data</li>
+            <li><strong>Health information</strong> — none</li>
+            <li><strong>Location data</strong> — no IP addresses, GPS coordinates, or geolocation</li>
+            <li><strong>Personal communications</strong> — no emails, messages, or chat data</li>
+            <li><strong>User activity tracking</strong> — no clicks, mouse movements, scrolling, or keystrokes</li>
+            <li><strong>Analytics or telemetry</strong> — no usage statistics are collected or transmitted</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>
+            The extension does <strong>not</strong> use any third-party services, APIs, analytics platforms, or external servers. There is no Google Analytics, no crash reporting, no CDN, and no remote code execution. All JavaScript libraries (Pako, JSZip) are bundled locally within the extension package.
+        </p>
+
+        <h2>Data Sharing and Transfer</h2>
+
+        <div class="card">
+            <p>The extension does <strong>not</strong> sell, transfer, share, or transmit any user data to any third party under any circumstances. All data remains entirely on the user's device.</p>
+        </div>
+
+        <p>Specifically:</p>
+        <ul>
+            <li>No data is sold or transferred to third parties</li>
+            <li>No data is used for advertising, profiling, or marketing purposes</li>
+            <li>No data is used to determine creditworthiness or for lending purposes</li>
+            <li>No data is transmitted to the developer or any external server</li>
+        </ul>
+
+        <h2>Data Security</h2>
+        <p>
+            All data is stored using Chrome's built-in <code>chrome.storage.local</code> API, which is sandboxed to the extension and inaccessible to websites or other extensions. Downloaded ZIP files are saved to the user's standard download directory with the same protections as any browser download.
+        </p>
+
+        <h2>User Control and Data Deletion</h2>
+        <p>You have full control over all stored data:</p>
+        <ul>
+            <li><strong>Delete individual findings</strong> — Click the delete button next to any finding in the extension popup</li>
+            <li><strong>Clear all findings</strong> — Use the clear all button in the extension popup</li>
+            <li><strong>Reset settings</strong> — Use the reset option in the extension settings page</li>
+            <li><strong>Complete removal</strong> — Uninstalling the extension removes all stored data automatically</li>
+        </ul>
+
+        <h2>Permissions Used</h2>
+        <table>
+            <thead>
+                <tr><th>Permission</th><th>Why It's Needed</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>webRequest</code></td>
+                    <td>Detect when the user navigates to a new website origin to trigger passive scanning</td>
+                </tr>
+                <tr>
+                    <td><code>storage</code></td>
+                    <td>Store findings, settings, and the scan-deduplication list locally</td>
+                </tr>
+                <tr>
+                    <td><code>notifications</code></td>
+                    <td>Alert the user when exposed repositories are discovered and when downloads complete</td>
+                </tr>
+                <tr>
+                    <td><code>downloads</code></td>
+                    <td>Save the extracted ZIP file to the user's computer</td>
+                </tr>
+                <tr>
+                    <td><code>tabs</code></td>
+                    <td>Read tab URLs to determine which website to scan and where to inject the content script</td>
+                </tr>
+                <tr>
+                    <td><code>scripting</code></td>
+                    <td>Inject the detection content script into tabs where it is not already running</td>
+                </tr>
+                <tr>
+                    <td><code>host_permissions</code></td>
+                    <td>Send read-only HTTP requests to any website to check for exposed files</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Children's Privacy</h2>
+        <p>
+            The extension is not directed at children under the age of 13. It does not knowingly collect any personal information from children.
+        </p>
+
+        <h2>Changes to This Policy</h2>
+        <p>
+            This privacy policy may be updated to reflect changes in the extension's functionality. Any changes will be posted to the extension's GitHub repository and reflected in the "Last updated" date above. Continued use of the extension after changes constitutes acceptance of the updated policy.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            If you have questions about this privacy policy or the extension's data practices, please contact:
+        </p>
+        <p>
+            <strong>Maor D.</strong><br>
+            Email: <a href="mailto:hi@maordayan.com">hi@maordayan.com</a><br>
+            GitHub: <a href="https://github.com/MaorDayanOfficial/DotGit-Enhanced/issues" target="_blank">Open an issue</a>
+        </p>
+
+        <div class="footer">
+            DotGit Enhanced &middot; Privacy Policy &middot; GPL-3.0 License<br>
+            <a href="https://github.com/MaorDayanOfficial/DotGit-Enhanced" target="_blank">github.com/MaorDayanOfficial/DotGit-Enhanced</a>
+        </div>
+
+    </div>
+</body>
+</html>
