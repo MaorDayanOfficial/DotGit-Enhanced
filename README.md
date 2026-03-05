@@ -236,7 +236,7 @@ Accessing systems without authorization is illegal in most jurisdictions. Always
 
 ### Built By
 
-**[Maor D.](https://github.com/maord2000)** — Cyber Intelligence Researcher & Cyber Security Researcher
+**[Maor D.](https://github.com/MaorDayanOfficial)** — Cyber Intelligence Researcher & Cyber Security Researcher
 
 ### Standing on the Shoulders of
 
@@ -267,8 +267,8 @@ GNU General Public License v3.0 — see [LICENSE](LICENSE).
 
 <br>
 
-**Found a bug or have an idea?** [Open an issue](https://github.com/maord2000/DotGit-Enhanced/issues)
+**Found a bug or have an idea?** [Open an issue](https://github.com/MaorDayanOfficial/DotGit-Enhanced/issues)
 
-Made with 🔒 for the security research community
+Made with ❤️ for the security research community
 
 </div>
