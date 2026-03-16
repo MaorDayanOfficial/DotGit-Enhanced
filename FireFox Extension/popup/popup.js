@@ -15,10 +15,8 @@ function debugLog(...args) {
     }
 }
 
-// Badge setup (cross-browser)
-if (typeof chrome.browserAction !== "undefined" && typeof chrome.browserAction.setBadgeText !== "undefined") {
-    chrome.browserAction.setBadgeText({ text: "" });
-} else if (typeof chrome.action !== "undefined" && typeof chrome.action.setBadgeText !== "undefined") {
+// Badge setup
+if (chrome.action?.setBadgeText) {
     chrome.action.setBadgeText({ text: "" });
 }
 
