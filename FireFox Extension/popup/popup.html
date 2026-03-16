@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DotGit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css"/>
+    <base target="_blank">
+    <script src="popup.js"></script>
+</head>
+<body>
+    <!-- Permissions Banner -->
+    <div id="permissions-banner" style="display: none;">
+        <div class="permissions-content">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <p>DotGit needs permissions to scan websites.</p>
+            <button id="request-permissions">Grant Access</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <svg class="logo-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="url(#logoGrad)" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="3.5" fill="url(#logoGrad)"/>
+                    <circle cx="12" cy="4.5" r="1.8" fill="url(#logoGrad)"/>
+                    <circle cx="18" cy="16.5" r="1.8" fill="url(#logoGrad)"/>
+                    <circle cx="6" cy="16.5" r="1.8" fill="url(#logoGrad)"/>
+                    <line x1="12" y1="8.5" x2="12" y2="6.3" stroke="url(#logoGrad)" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="14.8" y1="14" x2="16.5" y2="15.2" stroke="url(#logoGrad)" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="9.2" y1="14" x2="7.5" y2="15.2" stroke="url(#logoGrad)" stroke-width="1.5" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="logoGrad" x1="2" y1="2" x2="22" y2="22">
+                            <stop offset="0%" stop-color="#34d399"/>
+                            <stop offset="100%" stop-color="#3b82f6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">DotGit</span>
+                <span class="logo-version">v5.2</span>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="icon-btn" id="about" title="About DotGit">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                </svg>
+            </button>
+            <button class="icon-btn" id="options" title="Settings">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/>
+                    <line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
+                </svg>
+            </button>
+            <button class="icon-btn danger" id="reset" title="Clear all findings">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar" id="statsBar">
+        <div class="stat">
+            <span class="stat-value" id="totalCount">0</span>
+            <span class="stat-label">Total</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-value git" id="gitCount">0</span><span class="stat-label">.git</span></div>
+        <div class="stat"><span class="stat-value env" id="envCount">0</span><span class="stat-label">.env</span></div>
+        <div class="stat"><span class="stat-value svn" id="svnCount">0</span><span class="stat-label">.svn</span></div>
+        <div class="stat"><span class="stat-value other" id="otherCount">0</span><span class="stat-label">Other</span></div>
+    </div>
+
+    <!-- Findings List -->
+    <div class="findings-container">
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+            </div>
+            <p class="empty-title">All clear</p>
+            <span class="empty-sub">No exposed repositories found yet.<br>Browse websites to start scanning.</span>
+        </div>
+        <ul class="findings-list" id="hostsFound"></ul>
+    </div>
+
+    <!-- Hidden compat element -->
+    <span id="hostsFoundTitle" style="display:none">Total found: 0 Max shown: 100</span>
+</body>
+</html>
